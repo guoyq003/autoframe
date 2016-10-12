@@ -86,6 +86,7 @@ public class DataUtilDemo {
 //        for (int i=0;i<1;i++){
 //        }
 //    }
+    //初始化excel中的数字double为整数
     //在TestData.xls文件中，根据columnName，获取所在的列号
     public int getColumnCount(String columnName,String excelFileName,int sheetNum) {
         Sheet sheet = this.getSheet(excelFileName,sheetNum);
@@ -126,4 +127,21 @@ public class DataUtilDemo {
         }
         return this.excelRowNum;
     }
-}                                                                                                  
+    //在TestData.xls中，根据rowName（场景名称）和列名columName，获得对应单元格的值
+    public String getCellValue(String rowName, String columnName,String excelFileName,int sheetNum) {
+        String cellValue = null;
+        excelRowNum = this.getRowCount(rowName,excelFileName,sheetNum);
+        excelColumnNum = this.getColumnCount(columnName,excelFileName,sheetNum);
+        Sheet sheet = this.getSheet(excelFileName,sheetNum);
+        Row row = sheet.getRow(excelRowNum);
+        if (row != null) {
+            sheet.getColumnBreaks();
+            Cell cell = row.getCell(excelColumnNum);
+            if (cell == null)
+                cellValue = "";
+            else
+                cellValue = cell.toString();
+        }
+        return cellValue;
+    }
+}
