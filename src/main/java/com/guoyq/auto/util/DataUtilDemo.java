@@ -8,7 +8,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.*;
-import java.util.LinkedHashMap;
 
 public class DataUtilDemo {
 
@@ -97,7 +96,7 @@ public class DataUtilDemo {
                 for (int j = 0; j < row.getPhysicalNumberOfCells(); j++) {
                     Cell cell = row.getCell(j);
                     if (cell != null) {
-                        if (cell.toString().equals(columnName)) {
+                        if (new FormatExcelCell().formatExcelCelltoString(cell).equals(columnName)) {
                             this.excelColumnNum = j;
                             break;
                         }
@@ -110,14 +109,14 @@ public class DataUtilDemo {
     //在TestData.xls文件中，根据rowname（场景名），获取所在的行号
     public int getRowCount(String rowName,String excelFileName,int sheetNum) {
         Sheet sheet = this.getSheet(excelFileName,sheetNum);
-        for (int i = 1; i < sheet.getPhysicalNumberOfRows(); i++) {
+        for (int i = 0; i < sheet.getPhysicalNumberOfRows(); i++) {
             Row row = sheet.getRow(i);
             if (row != null) {
                 sheet.getColumnBreaks();
                 for (int j = 0; j < row.getPhysicalNumberOfCells(); j++) {
                     Cell cell = row.getCell(j);
                     if (cell != null) {
-                        if (cell.toString().equals(rowName)) {
+                        if (new FormatExcelCell().formatExcelCelltoString(cell).equals(rowName)) {
                             this.excelRowNum = i;
                             break;
                         }
@@ -140,7 +139,7 @@ public class DataUtilDemo {
             if (cell == null)
                 cellValue = "";
             else
-                cellValue = cell.toString();
+                cellValue = new FormatExcelCell().formatExcelCelltoString(cell);
         }
         return cellValue;
     }
