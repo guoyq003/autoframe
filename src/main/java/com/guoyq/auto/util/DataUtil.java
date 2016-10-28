@@ -447,7 +447,7 @@ public class DataUtil {
         if (filePath.size() == 0) {
             findFiles(".\\data", "RunList.xlsx", filePath);
         }
-        caseFilePath = (String) filePath.get(0);  //获取第一个EXCEL,所以不能出现重名的
+        caseFilePath = filePath.get(0);  //获取第一个EXCEL,所以不能出现重名的
         System.out.println();
         try {
             Workbook wb = this.getHSSFWorkbook(caseFilePath);
