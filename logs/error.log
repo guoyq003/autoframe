@@ -1,0 +1,15 @@
+2016-10-26 14:58:00  [ main:0 ] - [ ERROR ]  文件查找失败：datad不是一个目录！
+2016-10-26 16:59:30  [ main:0 ] - [ ERROR ]  文件查找失败：data.xmld不是一个目录！
+2016-10-26 17:55:39  [ main:0 ] - [ ERROR ]  java.lang.NullPointerException
+2016-10-26 17:57:24  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
+2016-10-26 17:59:52  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
+2016-10-26 18:02:02  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
+2016-10-26 18:03:56  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
+2016-10-26 18:12:49  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
+2016-10-26 18:16:21  [ main:0 ] - [ ERROR ]  java.lang.NullPointerException
+2016-10-26 18:16:54  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
+2016-10-26 18:17:43  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
+2016-10-26 18:19:52  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
+2016-10-26 18:20:41  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
+2016-10-26 18:21:23  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
+2016-10-26 18:22:52  [ main:0 ] - [ ERROR ]  获取运行列表值为空，java.lang.NullPointerException
