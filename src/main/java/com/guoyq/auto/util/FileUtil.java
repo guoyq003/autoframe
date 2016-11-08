@@ -20,7 +20,6 @@ public class FileUtil {
             e.printStackTrace();
         }
     }
-    
     public static void fileWriter(String path,String msg) throws IOException {
         FileWriter fileWriter=new FileWriter(path);
         fileWriter.write(msg);
